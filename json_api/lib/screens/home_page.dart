@@ -16,6 +16,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("JSON API"),
+        backgroundColor: Colors.red,
+      ),
       body: FutureBuilder<loadApiData>(
         future: apiCall(),
         builder: (context, snapshot) {
@@ -24,11 +28,11 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.grey,
                 child: Center(
                     child: Text(
-                  "Kullanıcı Adı:${snapshot.data!.username}\n"
-                  "Email:${snapshot.data!.email}",
+                  "Kullanıcı Adı : ${snapshot.data!.username}\n"
+                  "Email : ${snapshot.data!.email}",
                   style: const TextStyle(
                     fontSize: 18,
-                    color: Colors.green,
+                    color: Colors.amber,
                     fontWeight: FontWeight.bold,
                   ),
                 )));

@@ -9,7 +9,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      color: Colors.red,
       debugShowCheckedModeBanner: false,
       home: HomePage(title: 'JSON API'),
     );
